@@ -1,4 +1,59 @@
 {
   "title": "Peneroka Titik Akhir API",
-  "description": "Temui dan uji semua titik akhir API dalam sistem LifeForge anda."
+  "description": "Temui dan uji semua titik akhir API dalam sistem LifeForge anda.",
+  "items": {
+    "endpoints": "Titik Akhir"
+  },
+  "sidebar": {
+    "all": "Semua Titik Akhir"
+  },
+  "headers": {
+    "endpoints": "Titik Akhir API",
+    "all": "Semua"
+  },
+  "badges": {
+    "auth": "Pengesahan diperlukan",
+    "encrypted": "Disulitkan hujung ke hujung",
+    "downloadable": "Mengembalikan fail yang boleh dimuat turun",
+    "media": "Menerima muat naik fail"
+  },
+  "actions": {
+    "copy": "Salin",
+    "copyPath": "Salin laluan",
+    "copyCurl": "Salin sebagai cURL",
+    "copyFetch": "Salin sebagai fetch"
+  },
+  "messages": {
+    "copied": "Disalin ke papan keratan"
+  },
+  "tryIt": {
+    "title": "Cuba",
+    "query": "Parameter pertanyaan (JSON)",
+    "body": "Badan permintaan (JSON)",
+    "execute": "Laksanakan",
+    "response": "Respons",
+    "confirm": {
+      "title": "Laksanakan permintaan",
+      "description": "Ini akan menghantar permintaan bukan-GET menggunakan sesi semasa anda. Ia mungkin mengubah data. Teruskan?"
+    }
+  },
+  "detail": {
+    "overview": "Gambaran Keseluruhan",
+    "schemas": "Skema",
+    "required": "diperlukan",
+    "optional": "pilihan",
+    "oneOf": "salah satu",
+    "variant": "Varian {{index}}",
+    "query": "Skema pertanyaan",
+    "body": "Skema badan",
+    "media": "Media (data borang berbilang bahagian)",
+    "responses": "Respons",
+    "noContent": "Tiada badan respons"
+  },
+  "empty": {
+    "endpoints": {
+      "title": "Tiada titik akhir ditemui",
+      "description": "Cuba laraskan carian atau penapis anda."
+    }
+  }
 }

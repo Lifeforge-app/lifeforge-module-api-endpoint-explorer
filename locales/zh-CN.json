@@ -1,4 +1,59 @@
 {
   "title": "API 端点探测器",
-  "description": "发现并测试您 LifeForge 系统中的所有 API 端点。"
+  "description": "发现并测试您 LifeForge 系统中的所有 API 端点。",
+  "items": {
+    "endpoints": "端点"
+  },
+  "sidebar": {
+    "all": "所有端点"
+  },
+  "headers": {
+    "endpoints": "API 端点",
+    "all": "全部"
+  },
+  "badges": {
+    "auth": "需要身份验证",
+    "encrypted": "端到端加密",
+    "downloadable": "返回可下载文件",
+    "media": "接受文件上传"
+  },
+  "actions": {
+    "copy": "复制",
+    "copyPath": "复制路径",
+    "copyCurl": "复制为 cURL",
+    "copyFetch": "复制为 fetch"
+  },
+  "messages": {
+    "copied": "已复制到剪贴板"
+  },
+  "tryIt": {
+    "title": "试一试",
+    "query": "查询参数（JSON）",
+    "body": "请求正文（JSON）",
+    "execute": "执行",
+    "response": "响应",
+    "confirm": {
+      "title": "执行请求",
+      "description": "这将使用您当前的会话发送非 GET 请求，可能会修改数据。是否继续？"
+    }
+  },
+  "detail": {
+    "overview": "概览",
+    "schemas": "结构定义",
+    "required": "必填",
+    "optional": "可选",
+    "oneOf": "其中之一",
+    "variant": "变体 {{index}}",
+    "query": "查询结构",
+    "body": "正文结构",
+    "media": "媒体文件（multipart 表单数据）",
+    "responses": "响应",
+    "noContent": "无响应正文"
+  },
+  "empty": {
+    "endpoints": {
+      "title": "未找到端点",
+      "description": "请尝试调整您的搜索或筛选条件。"
+    }
+  }
 }

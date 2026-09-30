@@ -1,4 +1,59 @@
 {
   "title": "API Endpoint Explorer",
-  "description": "Discover and test all API endpoints in your LifeForge system."
+  "description": "Discover and test all API endpoints in your LifeForge system.",
+  "items": {
+    "endpoints": "endpoints"
+  },
+  "sidebar": {
+    "all": "All Endpoints"
+  },
+  "headers": {
+    "endpoints": "API Endpoints",
+    "all": "All"
+  },
+  "badges": {
+    "auth": "Authentication required",
+    "encrypted": "End-to-end encrypted",
+    "downloadable": "Returns a downloadable file",
+    "media": "Accepts file uploads"
+  },
+  "actions": {
+    "copy": "Copy",
+    "copyPath": "Copy path",
+    "copyCurl": "Copy as cURL",
+    "copyFetch": "Copy as fetch"
+  },
+  "messages": {
+    "copied": "Copied to clipboard"
+  },
+  "tryIt": {
+    "title": "Try it",
+    "query": "Query parameters (JSON)",
+    "body": "Request body (JSON)",
+    "execute": "Execute",
+    "response": "Response",
+    "confirm": {
+      "title": "Execute request",
+      "description": "This will send a non-GET request using your current session. It may modify data. Continue?"
+    }
+  },
+  "detail": {
+    "overview": "Overview",
+    "schemas": "Schemas",
+    "required": "required",
+    "optional": "optional",
+    "oneOf": "one of",
+    "variant": "Variant {{index}}",
+    "query": "Query schema",
+    "body": "Body schema",
+    "media": "Media (multipart form data)",
+    "responses": "Responses",
+    "noContent": "No response body"
+  },
+  "empty": {
+    "endpoints": {
+      "title": "No endpoints found",
+      "description": "Try adjusting your search or filters."
+    }
+  }
 }
