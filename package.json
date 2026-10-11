@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/lifeforge-app/lifeforge-module-apiEndpointExplorer.git"
   },
-  "version": "0.0.5",
+  "version": "0.0.1",
   "type": "module",
   "author": "Melvin Chia <melvinchia623600@gmail.com>",
   "description": "Discover and test all API endpoints in your LifeForge system.",
