@@ -3,7 +3,7 @@
   "displayName": "API Endpoint Explorer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lifeforge-app/lifeforge-module-apiEndpointExplorer.git"
+    "url": "https://github.com/Lifeforge-app/lifeforge-module-api-endpoint-explorer.git"
   },
   "version": "0.0.1",
   "type": "module",
