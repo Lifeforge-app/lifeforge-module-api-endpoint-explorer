@@ -19,9 +19,9 @@ function flattenAllOf(schema: JSONSchema): JSONSchema {
 
   const resolved: JSONSchema = { ...schema, type: schema.type ?? 'object' }
   const properties: Record<string, JSONSchema> = {
-    ...((schema.properties as Record<string, JSONSchema>) ?? {})
+    ...((schema.properties ?? {}) as Record<string, JSONSchema>)
   }
-  const required = new Set<string>((schema.required as string[]) ?? [])
+  const required = new Set<string>((schema.required ?? []) as string[])
   const variants: JSONSchema[] = []
 
   for (const member of schema.allOf as JSONSchema[]) {
@@ -29,10 +29,10 @@ function flattenAllOf(schema: JSONSchema): JSONSchema {
 
     Object.assign(
       properties,
-      (flattenedMember.properties as Record<string, JSONSchema>) ?? {}
+      (flattenedMember.properties ?? {}) as Record<string, JSONSchema>
     )
 
-    for (const key of (flattenedMember.required as string[]) ?? []) {
+    for (const key of (flattenedMember.required ?? []) as string[]) {
       required.add(key)
     }
 
@@ -64,7 +64,7 @@ export function resolveSchema(schema: JSONSchema): ResolvedSchema {
     description: flattened.description as string | undefined,
     enum: flattened.enum as unknown[] | undefined,
     properties: flattened.properties as Record<string, JSONSchema> | undefined,
-    required: (flattened.required as string[]) ?? [],
+    required: (flattened.required ?? []) as string[],
     items: flattened.items as JSONSchema | undefined,
     additionalProperties: flattened.additionalProperties as
       | JSONSchema

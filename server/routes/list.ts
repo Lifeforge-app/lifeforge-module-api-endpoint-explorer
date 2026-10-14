@@ -53,12 +53,9 @@ export const list = forge
     }
   })
   .callback(async ({ req, response }) => {
-    const modules = new Map(ModuleRegistry.list.map(m => [m.moduleId, m]))
+    const modules = new Map(ModuleRegistry.list.map(m => [m.id, m]))
     const modulesByName = new Map(
-      ModuleRegistry.list.map(m => [
-        m.name.replace(/^@lifeforge\//, ''),
-        m.moduleId
-      ])
+      ModuleRegistry.list.map(m => [m.name.replace(/^@lifeforge\//, ''), m.id])
     )
 
     const groups: Record<string, EndpointGroup> = {
@@ -81,8 +78,8 @@ export const list = forge
       encrypted: route.encrypted ?? false,
       isDownloadable: route.isDownloadable ?? false,
       media: (route.media as Endpoint['media']) ?? null,
-      input: (route.input as Endpoint['input']) ?? {},
-      output: (route.output as Endpoint['output']) ?? 'custom'
+      input: (route.input as Endpoint['input'] | undefined) ?? {},
+      output: (route.output as Endpoint['output'] | undefined) ?? 'custom'
     })
 
     const seen = new Set<string>()
@@ -101,12 +98,12 @@ export const list = forge
       const module = moduleId ? modules.get(moduleId) : undefined
 
       if (!module) {
-        groups.core.routes.push(buildEndpoint(route, route.path))
+        groups.core?.routes.push(buildEndpoint(route, route.path))
 
         continue
       }
 
-      const key = `${module.moduleId}|${route.method}|${relativePath}`
+      const key = `${module.id}|${route.method}|${relativePath}`
 
       if (seen.has(key)) {
         continue
@@ -114,14 +111,14 @@ export const list = forge
 
       seen.add(key)
 
-      groups[module.moduleId] ??= {
+      groups[module.id] ??= {
         displayName: module.displayName,
         icon: module.icon,
         category: module.category,
         routes: []
       }
 
-      groups[module.moduleId].routes.push(buildEndpoint(route, relativePath))
+      groups[module.id]?.routes.push(buildEndpoint(route, relativePath))
     }
 
     return response.ok(groups)
