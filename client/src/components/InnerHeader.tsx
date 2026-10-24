@@ -34,16 +34,13 @@ function InnerHeader({ totalItemsCount }: { totalItemsCount: number }) {
     <>
       <Flex align="center" as="header" justify="between">
         <Flex align="baseline" minWidth="0">
-          <Text
-            truncate
-            as="h1"
-            size={{ base: '2xl', xl: '3xl' }}
-            weight="semibold"
-          >
-            {t('headers.endpoints')}
-          </Text>
-          <Text color="muted" ml="sm" mr="xl">
-            ({totalItemsCount})
+          <Text as="h1" weight="semibold">
+            <Text truncate size={{ base: '2xl', xl: '3xl' }}>
+              {t('headers.endpoints')}
+            </Text>{' '}
+            <Text color="muted" ml="sm" mr="xl">
+              ({totalItemsCount})
+            </Text>
           </Text>
         </Flex>
         <Button
