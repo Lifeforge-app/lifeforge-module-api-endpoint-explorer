@@ -7,6 +7,7 @@ import {
   ListboxOption,
   SearchInput,
   Text,
+  surface,
   useModuleSidebarState
 } from '@lifeforge/ui'
 
@@ -54,6 +55,7 @@ function InnerHeader({ totalItemsCount }: { totalItemsCount: number }) {
       </Flex>
       <Flex align="center" gap="sm" mb="xl" mt="md" wrap="wrap">
         <Listbox
+          bg={surface.defaultInteractive}
           minWidth="14rem"
           renderContent={() => (
             <Flex align="center" gap="sm">

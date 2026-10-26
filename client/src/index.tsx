@@ -25,7 +25,6 @@ function EndpointExplorerContent({ data }: { data: EndpointGroups }) {
       <Sidebar groups={data} />
       <ContentWrapperWithSidebar>
         <InnerHeader totalItemsCount={total} />
-
         {total > 0 ? (
           <Scrollbar>
             <EndpointList
