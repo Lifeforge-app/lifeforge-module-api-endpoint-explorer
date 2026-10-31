@@ -50,7 +50,7 @@ function EndpointSchema() {
           <Text color="muted" size="base" weight="medium">
             {t('detail.media')}
           </Text>
-          <MediaSchema media={endpoint.media!} />
+          <MediaSchema media={endpoint.media} />
         </Stack>
       )}
       {outputEntries.length > 0 && (

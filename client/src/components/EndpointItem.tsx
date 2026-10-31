@@ -85,7 +85,7 @@ function EndpointItem({
             size="base"
             variant="outlined"
           />
-          <Text size="lg" as="code" color="muted" truncate>
+          <Text truncate as="code" color="muted" size="lg">
             {segments.join('/')}
             <Text color="primary">/{lastSegment}</Text>
           </Text>

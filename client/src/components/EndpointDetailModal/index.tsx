@@ -22,9 +22,9 @@ function EndpointDetailModal({
   return (
     <EndpointDetailProvider
       endpoint={endpoint}
+      moduleIcon={moduleIcon}
       moduleKey={moduleKey}
       moduleName={moduleName}
-      moduleIcon={moduleIcon}
     >
       <Box minWidth={{ base: '100%', md: '40rem' }}>
         <ModalHeader
@@ -39,7 +39,7 @@ function EndpointDetailModal({
                   marginLeft: '-0.125em'
                 }}
               >
-                <Icon icon={moduleIcon} color="muted" size="1em" />
+                <Icon color="muted" icon={moduleIcon} size="1em" />
                 <Text color="muted" size="sm" weight="medium">
                   {moduleName}
                 </Text>
@@ -54,7 +54,7 @@ function EndpointDetailModal({
                 >
                   {endpoint.method}
                 </Text>
-                <Text as="code" size="lg" truncate>
+                <Text truncate as="code" size="lg">
                   {endpoint.path}
                 </Text>
               </Flex>

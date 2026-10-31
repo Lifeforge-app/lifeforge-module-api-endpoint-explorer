@@ -65,10 +65,8 @@ export function resolveSchema(schema: JSONSchema): ResolvedSchema {
     enum: flattened.enum as unknown[] | undefined,
     properties: flattened.properties as Record<string, JSONSchema> | undefined,
     required: (flattened.required ?? []) as string[],
-    items: flattened.items as JSONSchema | undefined,
-    additionalProperties: flattened.additionalProperties as
-      | JSONSchema
-      | undefined,
+    items: flattened.items,
+    additionalProperties: flattened.additionalProperties,
     variants: (flattened.anyOf ?? flattened.oneOf) as JSONSchema[] | undefined
   }
 }
